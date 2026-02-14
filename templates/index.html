@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Enter Startup Details</title>
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background: linear-gradient(135deg,#141e30,#243b55);
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.card{
+background: rgba(255,255,255,0.08);
+padding:40px;
+border-radius:20px;
+backdrop-filter: blur(15px);
+box-shadow:0 20px 50px rgba(0,0,0,0.5);
+width:400px;
+}
+
+h2{
+text-align:center;
+margin-bottom:25px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:none;
+border-radius:12px;
+background: rgba(255,255,255,0.15);
+color:white;
+outline:none;
+}
+
+input::placeholder{
+color:#ddd;
+}
+
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:25px;
+background: linear-gradient(120deg,#00c6ff,#0072ff);
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h2>📊 Enter Startup Details</h2>
+
+<form action="/predict" method="post">
+
+<input type="number" name="f1" placeholder="Age at First Funding Year" required>
+<input type="number" name="f2" placeholder="Age at Last Funding Year" required>
+<input type="number" name="f3" placeholder="Age at First Milestone Year" required>
+<input type="number" name="f4" placeholder="Age at Last Milestone Year" required>
+<input type="number" name="f5" placeholder="Number of Relationships" required>
+<input type="number" name="f6" placeholder="Funding Rounds" required>
+<input type="number" name="f7" placeholder="Total Funding USD" required>
+<input type="number" name="f8" placeholder="Milestones" required>
+<input type="number" name="f9" placeholder="Average Participants" required>
+
+<button type="submit">Predict Success</button>
+
+</form>
+</div>
+
+</body>
+</html>
